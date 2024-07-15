@@ -4,12 +4,19 @@ html {
 
 body {
     margin: 0;
+    background-color: #f2e5f3;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: medium;
 }
 
-h1, h2, p, span ul {
-    margin: 25;
-    color: #666; 
+footer {
+    margin: 0;
+    background-color: #dcbcdf;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: medium;
+    color: dark;
 }
+
 
 .container {
     max-width: 1920px;
@@ -41,9 +48,10 @@ nav:after {
 
 .nav-container {
     max-width: 1200px;
-    position: relative;
+    position: fixed;
     margin-right: auto;
     margin-left: auto;
+    padding: auto;
 }
 
 #Logo {
@@ -57,21 +65,105 @@ nav:after {
     height: 100px;
     line-height: 100px;
     margin: 0;
+    padding: auto;
 }
 
 .nav-container li {
     list-style: none;
     float: left;
     margin: 0 50px;
+    padding: auto;
 }
 
 .nav-container li a {
     text-decoration: none;
     color: #666;
     transition: .5s;
+    padding: auto;
 
 }
 
 .nav-container li a:hover {
     color: #3381f3;
+}
+
+.lista-receitas li {
+    margin-bottom: 15px;
+    padding: 5px 0;
+    background-color: pink;
+}
+
+#main-banner {
+    padding: 25px;
+    margin: 0px;
+}
+
+#main-receita {
+    padding: 25px;
+    margin: 0px;
+}
+
+#form-barra {
+    margin-right: auto;
+}
+
+.form-control {
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.form-control label {
+    display: inline-block;
+    margin-bottom: 5px;
+    color: #631f3b;
+}
+
+.form-control input {
+    border: 2px solid #3E445B;
+    border-radius: 5px;
+    outline: 0;
+
+    display: block;
+
+    font-size: 14px;
+
+    width: 100%;
+    padding: 15px;
+}
+
+.form-control.success input {
+    border: 3px solid #4ECA64;
+}
+
+.form-control.error input {
+    border: 3px solid #DB5A5A;
+}
+
+.form-control.error i.img-error {
+    visibility: visible;
+}
+
+.form-control.success i.img-success {
+    visibility: visible;
+}
+
+.form-control.error small{
+    color: #DB5A5A;
+    visibility: visible;
+}
+
+.form-control i {
+    position: absolute;
+    top: 45px;
+    right: 10px;
+    visibility: hidden;
+}
+
+.form-control small {
+    visibility: hidden;
+    position: absolute;
+    margin-top: 5px;
+    font-size: 14px;
+
 }
