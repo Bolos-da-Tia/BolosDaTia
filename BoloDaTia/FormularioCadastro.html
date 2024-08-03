@@ -4,53 +4,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <link rel="stylesheet" href="css/Main.css">
-
+    <script src="./script.js" defer></script>
+    <title>Formulário de cadastro</title>
 </head>
 
 <body>
 
         <div class="header">
-            <h2>Create Account</h2>
+            <h2>Crie a sua conta</h2>
         </div>
 
         <form class="form" id="form">
 
             <div class="form-control">
-
-                <label for="username" >Nome</label>
-                <input type="text" id="username" placeholder="Insira o seu nome de cadastro">
-
+                <label for="username" >Nome de usuário: *</label>
+                <input type="text" id="username" name="username" class="correct" placeholder="Insira o seu nome de cadastro">
+                <p id="username-helper" class="helper-text">Mensagem de Ajuda</p>
             </div>
 
             <div class="form-control">
-
-                <label>Email</label>
-                <input type="email" id="email">
-
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" class="error">
+                <p id="e-mail helper" class="helper-text visible">Mensagem de Ajuda</p>
             </div>
 
             <div class="form-control">
-
-                <label>Senha</label>
-                <input type="password" id="password">
-
-
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha">
+                <p id="senha-helper" class="helper-text">Mensagem de Ajuda</p>
             </div>
 
             <div class="form-control">
-
-                <label>Confirme sua senha</label>
-                <input type="password" id="password-two">
-
-
+                <label for="confirma-senha">Confirme sua senha:</label>
+                <input type="password" id="confirma-senha" name="confirma-senha">
+                <p id="confirma-senha-helper" class="helper-text">Mensagem de Ajuda</p>
             </div>
             <button type="submit" >ENVIAR</button>
         </form>
     </div>
 
 
-    <script src="./script.js"></script>
+
 </body>
 </html>
