@@ -1,76 +1,37 @@
-const form = document.getElementById('form')
-const username = document.getElementById('username')
-const email = document.getElementById('email')
-const password = document.getElementById('password')
-const passwordtwo = document.getElementById('password-two')
+//----------------------Validação USERNAME---------------//
+let form = document.getElementById('form');
+let usernameInput = document.getElementById('username');
+let usernameLabel = document.querySelector('label[for="username"]');
+let usernameHelper = document.getElementById('username-helper');
 
-form.addEventListener('submit', (e) => {
-    e.preventDefault()
-    checkInputs()
+
+//---------------------Mostrar Popup campo obrigatório---//
+
+usernameInput.addEventListener("focus", () => {
+    usernameLabel.classList.add("required-popup")
+})
+
+//---------------------Oculta Popup campo obrigatório---//
+usernameInput.addEventListener("blur", () => {
+    usernameLabel.classList.remove("required-popup")
+})
+
+//---------------------Validar valor do input----------//
+usernameInput.addEventListener("change", function(e){
+    let valorUsername = e.target.value
+    if(valorUsername.length < 4){
+        console.log("O Username precisa ter 4 ou mais caracteres")
+        usernameInput.classList.remove("correct")
+        usernameInput.classList.add("error")
+        usernameHelper.innerText = "O Username precisa ter 4 ou mais caracteres"
+        usernameHelper.classList.add("visible")
+    }else{
+        console.log("Username válido")
+        usernameInput.classList.remove("error")
+        usernameInput.classList.add("correct")
+        usernameHelper.classList.remove("visible")
+    }
 })
 
 
-function setErrorFor(input,message) {
-    const formControl = input.parentElement;
-    const small = formControl.querySelector('small')
-
-    small.innerText = message
-
-    formControl.className = 'form-control error'
-}
-
-function setSuccessFor(input) {
-    const formControl = input.parentElement;
-
-    formControl.className = 'form-control success'
-}
-
-
-function isEmail(email) {
-  return /^(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/.test(email)
-}
-
-function checkInputs() {
-    const usernameValue = username.value.trim()
-    const emailValue = email.value.trim()
-    const passwordValue = password.value.trim()
-    const passwordtwoValue = password.value.trim()
-
-    if(usernameValue === '') {
-        setErrorFor(username, 'Preencha esse campo')
-        
-    } else if(usernameValue.lenght < 5) {
-        setErrorFor(username, 'Usuário deve ter mais que 5 caracteres')
-    } else {
-        setSuccessFor(username)
-    }
-
-    if(emailValue === '') {
-        setErrorFor(email, 'Preencha esse campo')
-
-    } else if (!isEmail(emailValue)) {
-        setErrorFor(email, 'Email inválido')
-
-    } else {
-        setSuccessFor(email)
-    }
-
-    if(passwordValue === '') {
-        setErrorFor(password, 'Preencha esse campo')
-
-    } else if (passwordValue.lenght < 8) {
-        setErrorFor(password, 'Senha deve ter mais que 8 caracteres')
-
-    } else {
-        setSuccessFor(password)
-    }
-
-    if(passwordtwoValue === '') {
-        setErrorFor(passwordtwo, 'Preencha esse campo')
-    } else if(passwordValue !== passwordtwoValue) {
-        setErrorFor(passwordtwo, 'Senhas não tão iguais')
-
-    } else {
-        setSuccessFor(passwordtwo)
-    }
-}
+//----------------------Validação USERNAME---------------//

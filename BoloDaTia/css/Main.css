@@ -108,9 +108,8 @@ nav:after {
 }
 
 .form-control {
-    margin-bottom: 10px;
-    padding-bottom: 20px;
-    position: relative;
+    margin-bottom: 5px;
+    padding-bottom: 10px;
 }
 
 .form-control label {
@@ -128,7 +127,7 @@ nav:after {
 
     font-size: 14px;
 
-    width: 100%;
+    width: 25%;
     padding: 15px;
 }
 
@@ -166,4 +165,38 @@ nav:after {
     margin-top: 5px;
     font-size: 14px;
 
+}
+
+.required-popup::after {
+    content: "*Campo Obrigatório";
+    top: 0;
+    right: 0;
+    color: #dfdfdf;
+    font-size: .65rem;
+    padding: .2rem .3rem;
+    width: auto;
+    display: block;
+    background-color: #202020;
+}
+
+input.error {
+    border: solid 2px #992020;
+    background-color: #CCBBBB;
+    color: #662020
+}
+
+input.correct {
+    background-color: #BBCCBB;
+    border: solid 2px #206620;
+    color: #206620;
+}
+
+.helper-text {
+    display: none;
+    font-size: .8rem;
+    color: darkred;
+}
+
+.visible {
+    display: block;
 }
