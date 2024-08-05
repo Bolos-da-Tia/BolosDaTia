@@ -108,6 +108,7 @@ nav:after {
 }
 
 .form-control {
+    padding: 25px;
     margin-bottom: 5px;
     padding-bottom: 10px;
 }
