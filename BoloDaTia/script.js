@@ -24,7 +24,7 @@ function mostrarPopup(input, label){
     input.addEventListener("blur", () => {
     label.classList.remove("required-popup")
     });
-}
+};
 
 mostrarPopup(usernameInput, usernameLabel);
 mostrarPopup(emailInput, emailLabel);
@@ -34,11 +34,11 @@ mostrarPopup(confirmasenhaInput, confirmasenhaLabel);
 //---------------------Validar valor do input----------//
 usernameInput.addEventListener("change", function(e){
     let valorUsername = e.target.value
-    if(valorUsername.length < 4){
-        console.log("O Username precisa ter 4 ou mais caracteres")
+    if(valorUsername.length < 5){
+        console.log("O Username precisa ter 5 ou mais caracteres")
         usernameInput.classList.remove("correct")
         usernameInput.classList.add("error")
-        usernameHelper.innerText = "O Username precisa ter 4 ou mais caracteres"
+        usernameHelper.innerText = "O Username precisa ter 5 ou mais caracteres"
         usernameHelper.classList.add("visible")
     }else{
         console.log("Username válido")
@@ -46,7 +46,7 @@ usernameInput.addEventListener("change", function(e){
         usernameInput.classList.add("correct")
         usernameHelper.classList.remove("visible")
     }
-})
+});
 
 emailInput.addEventListener("change", function(e){
     let valor = e.target.value
@@ -62,7 +62,37 @@ emailInput.addEventListener("change", function(e){
         emailHelper.innerText = "Email precisa incluir um @ e .com"
         emailHelper.classList.add("visible")
     }
-})
+});
 
 
-//----------------------Validação USERNAME---------------//
+senhaInput.addEventListener("change", function(e){
+    let valorSenha = e.target.value
+    if(valorSenha.length < 4){
+        senhaInput.classList.remove("correct")
+        senhaInput.classList.add("error")
+        senhaHelper.innerText = "A senha precisa ter 4 ou mais caracteres"
+        senhaHelper.classList.add("visible")
+    }else{
+        console.log(valorSenha)
+        senhaInput.classList.remove("error")
+        senhaInput.classList.add("correct")
+        senhaHelper.classList.remove("visible")
+    }
+});
+
+
+confirmasenhaInput.addEventListener("change", function(e){
+    let capturaConfirmaSenha = e.target.value
+    if (capturaConfirmaSenha.length < 4){
+        confirmasenhaInput.classList.remove("correct")
+        confirmasenhaInput.classList.add("error")
+        confirmasenhaHelper.innerText = "A senha precisa ter 4 ou mais caracteres"
+        confirmasenhaHelper.classList.add("visible")
+    } else {
+        confirmasenhaInput.classList.remove("error")
+        confirmasenhaInput.classList.add("correct")
+        confirmasenhaHelper.innerText = "Senha válida"
+        confirmasenhaHelper.classList.remove("visible")
+    }
+});
+
