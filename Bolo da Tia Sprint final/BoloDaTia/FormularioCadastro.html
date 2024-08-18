@@ -1,0 +1,87 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/formulario.css">
+    <script src="./script.js" defer></script>
+    <title>Formulário de cadastro</title>
+    <link rel="icon" type="favicon/text" href="./favicon.ico">
+    <script src="https://kit.fontawesome.com/b493036c5c.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+
+
+    <header>
+        <div class="logo_box"> <img src="./LogoBolo.PNG" alt=""></div>
+        <nav class="nav_bar">
+            <ul>
+                <li><a href="BoloDaTia.html">Home</a></li>
+                <li><a href="Receitas.html">Receitas</a></li>
+                <li><a href="FormularioCadastro.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="form-box">
+        <h1 class="titulo">Formulário</h1>
+        <h2 class="subtitulo">Crie a sua conta</h2>
+    
+        <form class="form" id="form">
+
+            <div class="form-control">
+                <label for="username" >Nome de usuário*:</label>
+                <input type="text" id="username" name="username">
+                <p id="username-helper" class="helper-text">Mensagem de Ajuda</p>
+            </div>
+
+            <div class="form-control">
+                <label for="email">E-mail*:</label>
+                <input type="email" id="email" name="email">
+                <p id="email-helper" class="helper-text">Mensagem de Ajuda</p>
+            </div>
+
+            <div class="form-control">
+                <label for="senha">Senha*:</label>
+                <input type="password" id="senha" name="senha">
+                <p id="senha-helper" class="helper-text">Mensagem de Ajuda</p>
+            </div>
+
+            <div class="form-control">
+                <label for="confirma-senha">Confirme sua senha*:</label>
+                <input type="password" id="confirma-senha" name="confirma-senha">
+                <p id="confirma-senha-helper" class="helper-text">Mensagem de Ajuda</p>
+            </div>
+        </form>
+        <button form="form" type="submit" >ENVIAR</button>
+    </div>
+
+    </main>
+
+    <footer>
+        <div class="sobre_nos">
+            <h2>Sobre nós</h2>
+            <p>Bolos da Tia é um site que busca facilitar o processo de pesquisa das reaceitas.</p>
+        </div>
+
+        <div class="redes_sociais">
+    <ul>
+        <li>
+            <a href=""><i class="fa-brands fa-instagram fa-xl dark"></i></a>
+        </li>
+        <li>
+            <a href=""><i class="fa-brands fa-facebook fa-xl dark"></i></a>
+        </li>
+    </ul>
+
+        </div>
+    </footer>
+
+
+
+</body>
+</html>

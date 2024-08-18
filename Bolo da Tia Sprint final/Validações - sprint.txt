@@ -1,0 +1,8 @@
+Passo a passo Sprint 05-08
+1. Validação nome de usuário
+	1.1 Usuário precisa ter 4 ou mais caracteres -> Fazer teste com erro e fazer teste com sucesso
+2. Validação email
+	2.1 Email precisa ter @
+	2.2 Email precisa ter .com -> Fazer teste com erro e fazer teste com sucesso
+3. Validação senha
+	3.1 Senha precisa ter 5 ou mais caracteres -> Fazer teste com erro e fazer teste com sucesso
